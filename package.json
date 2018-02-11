@@ -1,0 +1,44 @@
+{
+  "name": "pinecore.cli",
+  "version": "0.0.1",
+  "description": "A pine projects fetcher and installer.",
+  "main": "index.js",
+  "scripts": {
+    "build-all": "pkg index.js -t node8-linux,node8-macos-x64,node8-win -o ./build/pinecli",
+    "build-win": "pkg index.js -t node8-win -o ./build/pinecli",
+    "build-linux": "pkg index.js -t node8-linux -o ./build/pinecli",
+    "build-macos": "pkg index.js -t node8-macos-x64 -o ./build/pinecli",
+    "start": "echo You need to Build the project; echo npm run-script build-all or build-win, build-macos, build-linux; exit 0",
+    "test": "echo Sorry no test included; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misha-marinenko/pinecore.cli.git"
+  },
+  "pkg": {
+    "scripts": "*.js",
+    "assets": "node_modules/**/*"
+  },
+  "keywords": [
+    "cli",
+    "build",
+    "pkg",
+    "macos",
+    "darwin",
+    "linux",
+    "win",
+    "win32",
+    "win64"
+  ],
+  "author": "Pinecore Team in Pinecorp © 2018",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/misha-marinenko/pinecore.cli/issues"
+  },
+  "homepage": "https://github.com/misha-marinenko/pinecore.cli#readme",
+  "dependencies": {
+    "commander": "^2.14.1",
+    "path": "^0.12.7",
+    "pkg": "^4.3.0"
+  }
+}
